@@ -12,7 +12,7 @@
             <h4 class="cdt-title">POUR QUOI ?</h4>
             <p class="cd-p2">
                 Nous proposons une rencontre « sans le regard des yeux », uniquement par téléphone
-                avec un.e même interlocuteur.trice, pour aborder les questions de relations, d’isolement et de sexualités.
+                avec un.e même interlocuteur.trice, pour aborder les questions de sexualités, relations et d’isolement.
             </p>
             <h4 class="cdt-title">COMMENT ?</h4>
             <p class="cd-p4">
