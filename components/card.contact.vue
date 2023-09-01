@@ -3,6 +3,7 @@
         <v-card-title class="card-contact-title">
             <span>Pour nous contacter :</span>
         </v-card-title>
+        <div class="cc-text-wrapper">
         <v-card-text class="cc-text1">
             <div class="cct1-div"><v-icon size="20px" class="ic-phone">mdi-phone</v-icon><span class="cct1-span1">Par
                     téléphone :<span class="cct1-span2">&nbsp06 318 567 24</span> </span><span class="cct1-span3"> *(numero
@@ -18,6 +19,7 @@
             <div class="cct3-div"><v-icon size="25px" color="blue" class="ic-facebook">mdi-facebook</v-icon><a
                     href="https://www.facebook.com/handiecoute" class="cct3-span1">Par facebook : handiecoute</a></div>
         </v-card-text>
+        </div>
     </v-card>
 </template>
 
@@ -47,6 +49,9 @@ export default {
 #card-contact {
     border: solid 3px $tertiary-color;
     border-radius: 10px;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
@@ -62,6 +67,17 @@ export default {
     font-size: 1.5rem;
     font-weight: 600;
 }
+
+.cc-text-wrapper{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+text-align: center;
+
+}
+
 
 .ic-phone,
 .ic-mail,

@@ -75,8 +75,9 @@ white-space: pre-wrap !important;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100%;
-    margin-right: 10%;
+    // margin-right: 10%;
     font-size: 1.8em;
 }
 
