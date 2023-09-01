@@ -5,9 +5,7 @@
             <div class="cpd-span">Présentation du dispositif « Handi Écoute »</div>
             <h4 class="cdt-title">POUR QUI ? </h4>
             <p class="cd-p1">
-                Mûri et soutenu par deux associations
-                1
-                , ce dispositif d’écoute et d’accompagnement
+                Mûri et soutenu par deux associations loi 1901, ce dispositif d’écoute et d’accompagnement
                 téléphonique s’adresse aux personnes vivant avec un handicap, à leur entourage familial, amical,
                 institutionnel.
             </p>
@@ -18,8 +16,7 @@
             </p>
             <h4 class="cdt-title">COMMENT ?</h4>
             <p class="cd-p4">
-                <span>Nous tenons une permanence téléphonique d’information les jeudis de 9h à 13h au 06
-                    318 567 24.</span>
+                <span>Nous tenons une permanence téléphonique d’information les jeudis de 9h à 13h au 06 318 567 24.</span>
                 <span> Les appelant.e.s peuvent évaluer avec nous si notre mode d’accompagnement leur paraît
                     correspondre à leurs attentes. Si ielles le souhaitent, nous conviendrons d’un rendez-vous téléphonique
                     avec un.e professionnel.le, qui restera leur interlocuteur.trice pour d’autres rendez-vous si besoin.
@@ -39,10 +36,7 @@
             <h4 class="cdt-title"> PAR QUI ?</h4>
             <p class="cd-p6">
                 Un et une conseiller.ère conjugal.e et familial.e expérimenté.e.s constituent pour l’instant le
-                pôle « accompagnants ». Ielles sont membres de l’ANCCEF
-
-                3 et sont garant.es du cadre des entretiens, de la
-
+                pôle « accompagnants ». Ielles sont membres de l’ANCCEF et sont garant.es du cadre des entretiens, de la
                 confidentialité, du non jugement vis-à vis des personnes qui leur font confiance.
             </p>
 

@@ -8,7 +8,7 @@
             </div>
         </v-card-title>
             <v-card-text class="cmt-text-1">
-                <span class="cmtt1-span">Relation, Isolement, Sexualités</span>
+                <span class="cmtt1-span"> Sexualités, Relation, Isolement</span>
             </v-card-text>
             <div class="cmt-tel">
                 <img class="icon-style" id="icone-handi" src="handiecoute.png" height="40px" alt="logo handiecoute" />
@@ -84,6 +84,7 @@ white-space: pre-wrap !important;
 .cmt-text-1 {
     color: $white;
     display: flex;
+    text-align: center;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
@@ -137,4 +138,21 @@ white-space: pre-wrap !important;
     height: 50px;
     width: 60px;
 }
+
+@media (min-width: 560px) {
+    .cmtt2-span {
+        font-size: 1.2em;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .cmtt2-span {
+        font-size: 1.3em;
+    }
+}
+
+
+
+
 </style>

@@ -32,12 +32,12 @@ export default {
             presentationCards: [
                 {
                     name: "Marie Eparvier",
-                    picture: "/photo.jpg",
+                    picture: "photo.jpg",
                     content: "l’association « Nio Far, tous ensemble »"
                 },
                 {
                     name: "Frédéric Colleuille ",
-                    picture: "/photo.jpg",
+                    picture: "photo.jpg",
                     content: "l’association « Singulier-Pluriel, conseil conjugal et familial »"
                 },
             ]
@@ -117,6 +117,7 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 0%;
 }
 
 .cppt-span {
@@ -152,6 +153,25 @@ export default {
 @media (min-width: 1000px) {
     .cp-wrapper {
         grid-gap: 20px;
+    }
+}
+
+
+@media (max-width: 440px) {
+    .cppt-span {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 410px) {
+    .cppt-span {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 370px) {
+    .cppt-span {
+        font-size: 1em;
     }
 }
 </style>
