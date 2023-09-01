@@ -6,7 +6,7 @@
         <div class="cc-text-wrapper">
         <v-card-text class="cc-text1">
             <div class="cct1-div"><v-icon size="20px" class="ic-phone">mdi-phone</v-icon><span class="cct1-span1">Par
-                    téléphone :<span class="cct1-span2">&nbsp06 318 567 24</span> </span><span class="cct1-span3"> *(numero
+                    téléphone :</span><span class="cct1-span2">&nbsp06 318 567 24</span><span class="cct1-span3"> *(numero
                     non surtaxé)</span></div>
         </v-card-text>
         <v-card-text class="cc-text2">
@@ -123,7 +123,8 @@ text-align: center;
 }
 
 .cct1-span3 {
-    color: $white
+    color: $white;
+    font-size: 0.8rem;
 }
 
 .cc-text2 {

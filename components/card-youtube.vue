@@ -1,7 +1,7 @@
 <template>
     <div class="card-youtube">
         <v-card-title class="cy-title"><span class="cyt-span">Que faisons nous ?</span></v-card-title>
-        <iframe class="video" width="560" height="315" :src="embedUrl" title="YouTube video player" frameborder="0"
+        <iframe class="video" width="760" height="450" :src="embedUrl" title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
     </div>
@@ -38,6 +38,7 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
     border-radius: 10px;
     border: solid 3px $tertiary-color;
     margin-bottom: 2%;
@@ -55,25 +56,36 @@ export default {
 
 }
 
-@media (min-width: 760px) {
+@media (max-width: 800px) {
     .video {
         width: 700px;
     }
 }
 
-@media (max-width: 630px) {
+@media (max-width: 7500px) {
+    .video {
+        width: 600px;
+        height: 350;
+    }
+}
+
+
+@media (max-width: 660px) {
     .video {
         width: 500px;
+        height: 250;
     }
 }
 @media (max-width: 560px) {
     .video {
         width: 400px;
+        height: 250;
     }
 }
 @media (max-width: 460px) {
     .video {
         width: 300px;
+        height: 250;
     }
 }
 // @media (max-width: 630px) {

@@ -2,7 +2,7 @@
     <v-card id="card-dispo">
 
         <v-card-text class="cd-title">
-            <div class="cpd-span">Présentation du dispositif « Handi Écoute »</div>
+            <div class="cpd-span">Présentation du dispositif «Handi Écoute»</div>
             <h4 class="cdt-title">POUR QUI ? </h4>
             <p class="cd-p1">
                 Mûri et soutenu par deux associations loi 1901, ce dispositif d’écoute et d’accompagnement
@@ -72,8 +72,8 @@ export default {
 
 <style lang="scss">
 #card-dispo {
-    background-color: $primary-color;
-    color: $white;
+    background-color:rgb(247, 242, 242) !important; ;
+    color: black !important;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -89,22 +89,22 @@ export default {
 }
 
 .cd-title {
-    background-color: $primary-color;
+    background-color: $whitebreak !important;
     width: 100%;
-    color: $tertiary-color;
+    color: $black;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
 }
 
 .cpd-span {
-    color: $tertiary-color;
+      color: $black;
     margin-bottom: 2%;
 }
 
 .cdt-title {
     margin-bottom: 2%;
-    color: $white
+    color: $black;
 }
 
 .cd-p1,
@@ -117,5 +117,5 @@ export default {
     font-size: large;
     text-align: center;
     margin-bottom: 2%;
-    color: $white
+    color: $black;
 }</style>

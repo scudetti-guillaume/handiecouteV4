@@ -53,8 +53,9 @@ export default {
 </script>
 
 <style lang="scss">
+
 #card-presentation {
-    background-color: $primary-color;
+    background-color: rgb(247, 242, 242) !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,17 +64,18 @@ export default {
     height: 100%;
     margin-bottom: 2%;
     padding-bottom: 2%;
-
 }
 
 .cp-title {
-    background-color: $primary-color;
+    background-color: $whitebreak;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     color: $tertiary-color;
+    border-radius: 2%;
+    
 }
 
 .cp-wrapper {
@@ -81,16 +83,24 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     //   grid-gap: 10px;
     justify-content: space-between;
+    background-color: $whitebreak;
+}
+
+.cpt-span{
+    color: $black;
+
+
 }
 
 .cpw-main {
-    background-color: $primary-color;
+    background-color: $whitebreak;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 30%;
     margin: 2%;
+   
 }
 
 #cp-perso {
@@ -108,6 +118,8 @@ export default {
     word-wrap: break-word;
     white-space: pre-wrap;
     margin-bottom: 2%;
+    margin-top: 2%;
+    border-radius: 5%;
 }
 
 .cp-perso-title {
@@ -123,6 +135,7 @@ export default {
 .cppt-span {
     color: $white;
     text-align: center;
+   
 }
 
 .cppt-img {
