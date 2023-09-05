@@ -1,30 +1,50 @@
 <template>
-    <v-card id="card-presentation">
-
-        <v-card-title class="cp-title">
-            <span class="cpt-span">Qui sommes nous ?</span>
-        </v-card-title>
-        <div class="cp-wrapper">
-            <v-card v-for="(card, index) in presentationCards" :key="index" id="cp-perso">
-                <v-card-text class="cp-perso-title">
-                    <p>
-                    <h2 class="cppt-span">{{ card.name }}</h2>
-                    <!-- <span class="cppt-span">{{ card.firstname }} {{ card.lastname }}</span> -->
-                    </p>
-                    <img class="cppt-img" :src="card.picture" alt="Photo de profil" />
-                </v-card-text>
-                <v-card-text class="cp-perso-text">
-                    <p>
-                        <span>{{ card.content }}</span>
-                    </p>
-                </v-card-text>
-            </v-card>
-        </div>
-    </v-card>
+    <div>
+        <v-card id="card-presentation">
+            <v-card-title class="cp-title">
+                <span class="cpt-span">Qui sommes nous ?</span>
+            </v-card-title>
+            <div class="cp-wrapper"  >
+                <v-card v-for="(card, index) in presentationCards" :key="index" id="cp-perso" @click="openModal($event, card)">
+                    <v-card-text class="cp-perso-title">
+                        <p>
+                        <h2 class="cppt-span">{{ card.name }}</h2>
+                        </p>
+                        <img class="cppt-img" :src="card.picture" alt="Photo de profil" />
+                    </v-card-text>
+                    <v-card-text class="cp-perso-text">
+                        <p class="cp-perso-text-p">{{ card.decriptif }}</p>
+                        <p class="cp-perso-text-p">{{ card.decriptif2 }}</p>
+                        <a class="cp-perso-text-a" :href="card.lien" target="_blank">
+                            <span>{{ card.content }}</span>
+                        </a>
+                    </v-card-text>
+                    <!-- <v-btn>Voir les détails</v-btn> -->
+                </v-card>
+            </div>
+            <modal name="presentation-modal"  >
+         <div class="custom-modal-content-perso">
+             <p class="cid-p1">
+             <h2 class="cppt-span">{{ selectedCard.name }}</h2>
+             <img class="cppt-img" :src="selectedCard.picture" alt="Photo de profil" />
+             <p class="cp-perso-text-p">{{ selectedCard.decriptif }}</p>
+             <p class="cp-perso-text-p">{{ selectedCard.decriptif2 }}</p>
+             <a class="cp-perso-text-a" :href="selectedCard.lien" target="_blank">
+                 <span>{{ selectedCard.content }}</span>
+             </a>
+             </p>
+         </div>
+     </modal>
+        </v-card>
+     
+    </div>
 </template>
 
-
 <script>
+import Vue from 'vue';
+import VModal from 'vue-js-modal';
+Vue.use(VModal);
+
 export default {
     name: 'presentationperson',
     data() {
@@ -33,23 +53,36 @@ export default {
                 {
                     name: "Marie Eparvier",
                     picture: "photo.jpg",
-                    content: "l’association « Nio Far, tous ensemble »"
+                    content: "l’association «Nio Far, tous ensemble»",
+                    decriptif: "conseillère conjugale et familiale",
+                    decriptif2: "Membre de l'ANCCEF",
+                    lien: 'https://www.assoniofar.org/'
                 },
                 {
-                    name: "Frédéric Colleuille ",
+                    name: "Frédéric Colleuille",
                     picture: "photo.jpg",
-                    content: "l’association « Singulier-Pluriel, conseil conjugal et familial »"
+                    content: "l’association «Singulier-Pluriel, conseil conjugal et familial»",
+                    decriptif: "conseiller conjugal et familial",
+                    decriptif2: "Membre de l'ANCCEF",
+                    lien: 'https://www.singulier-pluriel.com'
                 },
-            ]
-        }
-    },
-   mounted() {
-        this.$emit('component-mounted', this.$el);
+            ],
+            selectedCard: '', // Initialisez selectedCard à null
+        };
     },
     methods: {
-
-    }
-}
+        openModal(event, card) {
+           const x = event.clientX;
+            const y = event.clientY;
+            
+            this.selectedCard = card; // Stockez la carte sélectionnée dans selectedCard
+            this.$modal.show("presentation-modal",{
+                x: x + 'px',
+                y: y + 'px',
+            });
+        },
+    },
+};
 </script>
 
 <style lang="scss">
@@ -60,11 +93,20 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 2%;
+    width: 80%;
+    height: auto;
     padding-bottom: 2%;
+    margin:0 auto;
+    margin-bottom: 2%;
 }
+
+@media screen and (max-width: 820px) {
+    #card-presentation {
+        width: 100%;
+    }
+}
+    
+
 
 .cp-title {
     background-color: $whitebreak;
@@ -103,6 +145,20 @@ export default {
    
 }
 
+.custom-modal-content-perso {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+height:100%;
+width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: $primary-color;
+  max-height: 400px; /* Par exemple, ajustez la hauteur en pixels selon vos besoins */
+  overflow-y: auto; /* Ajoutez une barre de défilement si nécessaire */
+}
+
 #cp-perso {
     width: 100%;
     height: 100%;
@@ -138,6 +194,7 @@ export default {
    
 }
 
+
 .cppt-img {
     width: 100px;
     height: 100px;
@@ -156,6 +213,25 @@ export default {
     padding: 0;
     word-wrap: break-word;
     white-space: pre-wrap
+}
+
+.cp-perso-text-p{
+    color: $white;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 2%;
+}
+
+.cp-perso-text-a{
+text-decoration: none;
+color: $white !important;
+}
+
+.cp-perso-text-a:hover{
+text-decoration: none;
+ color: $tertiary-color !important;
 }
 
 .cpt-span {

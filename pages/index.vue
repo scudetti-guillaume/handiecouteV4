@@ -3,9 +3,13 @@
   <div class="main">
        <accueil ref="first"/>
       <presentation ref="accueil" />
+      <presentationicone ref="icone" />
       <youtube ref="presentation" />
+      <ressource ref="ressources" />
       <presentationdispo ref="dispositif" />
       <contact ref="contact" />
+  
+      
   </div>
   
 </template>
@@ -16,7 +20,11 @@ import presentation from '../components/card-presentationperso.vue';
 import youtube from '../components/card-youtube.vue';
 import contact from '../components/card.contact.vue';
 import presentationdispo from '../components/card-presentationdispositif.vue';
+import presentationicone from '../components/card-presentationicone.vue';
 import DefaultLayout from '../layouts/default.vue';
+import ressource from '../components/card-ressources.vue';
+import VueSpeech from 'vue-speech';
+import presentationModal from '../components/card-detail-presentation.vue';
 
 
 export default {
@@ -28,6 +36,9 @@ export default {
     youtube,
     presentationdispo,
     DefaultLayout,
+    presentationModal,
+    presentationicone,
+    ressource
  
   },
   data() {
@@ -58,18 +69,20 @@ export default {
 
 <style lang="scss">
 
-.v-main__wrap{
-  background-color: $secondary-color;
+.v-main__wrap {
+display: flex;
+justify-content: center;
+align-items: center;
+  background: linear-gradient(to right, #FF0018, #FFA52C, #FFFF41, #008018, #0000F9, #86007D)!important;
 }
 
-
-#card-main{
-  background-color: $primary-color;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+// #card-main{
+//   background-color: $primary-color;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 
 </style>

@@ -4,7 +4,7 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
   router: {
-    base: '/handiecoute/' // Remplacez "/handiecoute/" par le chemin de base que vous souhaitez utiliser
+    base: '/handiecouteV2/' // Remplacez "/handiecoute/" par le chemin de base que vous souhaitez utiliser
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head

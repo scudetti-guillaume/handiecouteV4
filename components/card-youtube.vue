@@ -37,10 +37,11 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: 100%;
     border-radius: 10px;
     border: solid 3px $tertiary-color;
+    margin:0 auto;
     margin-bottom: 2%;
     padding-bottom: 2%;
 }

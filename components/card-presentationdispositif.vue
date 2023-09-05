@@ -2,7 +2,7 @@
     <v-card id="card-dispo">
 
         <v-card-text class="cd-title">
-            <div class="cpd-span">Présentation du dispositif «Handi Écoute»</div>
+            <div class="cpd-span"><p class="cpd-span1">Présentation du dispositif</p><p class="cpd-span2">«Handi Écoute»</p> </div>
             <h4 class="cdt-title">POUR QUI ? </h4>
             <p class="cd-p1">
                 Mûri et soutenu par deux associations loi 1901, ce dispositif d’écoute et d’accompagnement

@@ -1,6 +1,7 @@
 <template>
   <v-app dark>
     <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
+   
       <v-list>
         <v-list-item v-for="(partItem, i) in part" :key="i" @click="emitScrollEvent(partItem.ref)" router exact>
   
@@ -11,7 +12,8 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer" /> -->
+       <div class="btn-menu"  @click.stop="drawer = !drawer" >Menu</div>
       <v-spacer/>
       <v-toolbar-title class="title-style">
         <a class="title-style" href="/">
@@ -20,6 +22,10 @@
         </a>
       </v-toolbar-title>
       <v-spacer/>
+    <div>
+        <button @click="lirePageEntiere">Lire la page</button>
+    </div>
+
       <!-- <v-list-item class="itemlist" v-for="(partItem, index) in part" :key="index" @click="emitScrollEvent(partItem.ref)">
         <v-list-item-title>{{ partItem.title }}</v-list-item-title>
       </v-list-item> -->
@@ -36,13 +42,30 @@
 </template>
 
 <script>
+import VueSpeech from 'vue-speech';
 export default {
   name: 'DefaultLayout',
+  //  mixins: [VueSpeech], // Utilisez la mixin Vue Speec
     methods: {
     emitScrollEvent(refName) {
       this.scrollToRef = refName;
       this.$root.$emit('scroll-to-component', refName);
     },
+     lirePageEntiere() {
+      // Sélectionnez tous les éléments de texte dans le document
+      const elementsTextuels = Array.from(document.querySelectorAll('*')).filter(element => {
+        const isTextElement = element.nodeType === Node.TEXT_NODE && element.textContent.trim() !== '';
+        const isHidden = window.getComputedStyle(element).display === 'none';
+        return isTextElement && !isHidden;
+      });
+
+      // Créez un seul texte à partir de tous les éléments de texte
+      const textePage = elementsTextuels.map(element => element.textContent).join(' ');
+
+      // Créez une synthèse vocale
+      // const utterance = new SpeechSynthesisUtterance(textePage);
+      window.speechSynthesis.speak(textePage);
+    }
   }, 
   data() {
     return {
@@ -63,6 +86,10 @@ export default {
           title: 'Qui sommes nous ?',
           ref: 'accueil'
         },
+          {
+          title: 'Des questions ?',
+          ref: 'icone'
+        },
         {
           title: 'Que faisons nous ?',
           ref: 'presentation',
@@ -70,6 +97,10 @@ export default {
         {
           title: 'Presentation dispositif',
           ref: 'dispositif',
+        },  
+      {
+          title: 'Ressources',
+          ref: 'ressources',
         },
         {
           title: 'Contact',
@@ -102,8 +133,12 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: 100%;
-
 margin-left: 10%;
-
 }
+
+.btn-menu:hover{
+  cursor: pointer;
+}
+
+
 </style>
