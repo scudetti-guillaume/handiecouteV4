@@ -82,7 +82,7 @@ export default {
     width: 100%;
     height: 100%;
     margin-bottom: 2%;
-    padding-bottom: 2%;
+    // padding-bottom: 2%;
     border: $border;
     border-radius: $br;
 

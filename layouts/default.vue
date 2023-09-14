@@ -22,9 +22,9 @@
         </a>
       </v-toolbar-title>
       <v-spacer/>
-    <div>
+    <!-- <div>
         <button @click="lirePageEntiere">Lire la page</button>
-    </div>
+    </div> -->
 
       <!-- <v-list-item class="itemlist" v-for="(partItem, index) in part" :key="index" @click="emitScrollEvent(partItem.ref)">
         <v-list-item-title>{{ partItem.title }}</v-list-item-title>
@@ -113,6 +113,22 @@ export default {
 </script>
 
 <style lang="scss">
+.v-toolbar__content {
+  display: flex;
+  justify-content: center;
+  max-width: 100vw;
+
+}
+
+v-container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+//  width:100%;
+ 
+}
+
 .title-style {
   display: flex;
   justify-content: center;

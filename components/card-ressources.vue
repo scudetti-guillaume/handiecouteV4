@@ -119,6 +119,44 @@ export default {
     padding-bottom: 2%;
 }
 
+
+@media (max-width: 800px) {
+    .video {
+        width: 700px;
+    }
+    .card-ressource {
+    width: 100%;
+    }
+}
+
+@media (max-width: 7500px) {
+    .video {
+        width: 600px;
+        height: 350;
+    }
+}
+
+
+@media (max-width: 660px) {
+    .video {
+        width: 500px;
+        height: 250;
+    }
+}
+@media (max-width: 560px) {
+    .video {
+        width: 400px;
+        height: 250;
+    }
+}
+@media (max-width: 460px) {
+    .video {
+        width: 300px;
+        height: 250;
+    }
+}
+
+
 .cr-title {
     display: flex;
     align-items: center;
@@ -208,6 +246,7 @@ export default {
     height: auto;
     color : $black !important;
     background-color : $tertiary-color !important;
+    text-align: center;
 }
 
 .cr-w-5-w {

@@ -5,24 +5,26 @@
                 <span class="cpt-span">Qui sommes nous ?</span>
             </v-card-title>
             <div class="cp-wrapper"  >
-                <v-card v-for="(card, index) in presentationCards" :key="index" id="cp-perso" @click="openModal($event, card)">
-                    <v-card-text class="cp-perso-title">
+                <v-card v-for="(card, index) in presentationCards" :key="index" id="cp-perso" >
+                    <v-card-text class="cp-perso-title" >
                         <p>
                         <h2 class="cppt-span">{{ card.name }}</h2>
                         </p>
                         <img class="cppt-img" :src="card.picture" alt="Photo de profil" />
                     </v-card-text>
                     <v-card-text class="cp-perso-text">
-                        <p class="cp-perso-text-p">{{ card.decriptif }}</p>
-                        <p class="cp-perso-text-p">{{ card.decriptif2 }}</p>
-                        <a class="cp-perso-text-a" :href="card.lien" target="_blank">
-                            <span>{{ card.content }}</span>
+                    <p class="cp-perso-text-p">{{ card.decriptif }}</p>
+                    <a class="cp-perso-text-a" :href="card.lien" target="_blank">
+                                <span>{{ card.content }}</span>
                         </a>
+                        
+                        <p class="cp-perso-text-p">{{ card.decriptif2 }}</p>
+                        
                     </v-card-text>
-                    <!-- <v-btn>Voir les détails</v-btn> -->
+                    <v-btn  @click="openModalDetailAction(card)" >Voir les détails</v-btn>
                 </v-card>
             </div>
-            <modal name="presentation-modal"  >
+            <!-- <modal name="presentation-modal"  >
          <div class="custom-modal-content-perso">
              <p class="cid-p1">
              <h2 class="cppt-span">{{ selectedCard.name }}</h2>
@@ -34,21 +36,28 @@
              </a>
              </p>
          </div>
-     </modal>
+     </modal> -->
         </v-card>
-     
+     <presentationCardsDetails v-if="openModalDetail" v-show="openModalDetail" @close-modale-detail="openModalDetail = false" :card="selectedCard"  />
     </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import VModal from 'vue-js-modal';
-Vue.use(VModal);
+// import Vue from 'vue';
+// import VModal from 'vue-js-modal';
+// Vue.use(VModal);
+import presentationCardsDetails from '../components/card-detail-presentation.vue';
 
 export default {
     name: 'presentationperson',
+    components: {
+    presentationCardsDetails: () => import( "../components/card-detail-presentation.vue"),
+
+    },
     data() {
         return {
+            selectedCard: '',
+            openModalDetail: false,
             presentationCards: [
                 {
                     name: "Marie Eparvier",
@@ -67,20 +76,26 @@ export default {
                     lien: 'https://www.singulier-pluriel.com'
                 },
             ],
-            selectedCard: '', // Initialisez selectedCard à null
+           
         };
     },
     methods: {
-        openModal(event, card) {
-           const x = event.clientX;
-            const y = event.clientY;
+        // openModal(event, card) {
+        //    const x = event.clientX;
+        //     const y = event.clientY;
             
+        //     this.selectedCard = card; // Stockez la carte sélectionnée dans selectedCard
+        //     this.$modal.show("presentation-modal",{
+        //         x: x + 'px',
+        //         y: y + 'px',
+        //     });
+        // },
+         openModalDetailAction(card) {
             this.selectedCard = card; // Stockez la carte sélectionnée dans selectedCard
-            this.$modal.show("presentation-modal",{
-                x: x + 'px',
-                y: y + 'px',
-            });
+            this.openModalDetail = true;
         },
+        
+       
     },
 };
 </script>
@@ -88,12 +103,12 @@ export default {
 <style lang="scss">
 
 #card-presentation {
-    background-color: rgb(247, 242, 242) !important;
+    background-color: $whitebreak !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 60%;
     height: auto;
     padding-bottom: 2%;
     margin:0 auto;
@@ -102,7 +117,7 @@ export default {
 
 @media screen and (max-width: 820px) {
     #card-presentation {
-        width: 100%;
+        width: 80%;
     }
 }
     
@@ -117,7 +132,6 @@ export default {
     width: 100%;
     color: $tertiary-color;
     border-radius: 2%;
-    
 }
 
 .cp-wrapper {
@@ -221,10 +235,15 @@ width: 100%;
     font-size: 1.2em;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 2%;
+    margin-bottom: 1% !important;
 }
 
 .cp-perso-text-a{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1%;
 text-decoration: none;
 color: $white !important;
 }
@@ -245,6 +264,15 @@ text-decoration: none;
     }
 }
 
+@media (max-width: 760px) {
+    .cp-wrapper {
+     display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+     grid-gap: 20px;
+      
+    }
+}
 
 @media (max-width: 440px) {
     .cppt-span {

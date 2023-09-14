@@ -1,6 +1,6 @@
 <template>
   
-  <div class="main">
+  <div class="card-main">
        <accueil ref="first"/>
       <presentation ref="accueil" />
       <presentationicone ref="icone" />
@@ -8,8 +8,6 @@
       <ressource ref="ressources" />
       <presentationdispo ref="dispositif" />
       <contact ref="contact" />
-  
-      
   </div>
   
 </template>
@@ -73,9 +71,15 @@ export default {
 display: flex;
 justify-content: center;
 align-items: center;
-  background: linear-gradient(to right, #FF0018, #FFA52C, #FFFF41, #008018, #0000F9, #86007D)!important;
+  // background: linear-gradient(to right, #FF0018, #FFA52C, #FFFF41, #008018, #0000F9, #86007D)!important;
+  background-color: rgb(255, 255, 255);
 }
 
+.container {
+max-width: 100%;
+margin: 0 auto;
+padding: 0;
+}
 // #card-main{
 //   background-color: $primary-color;
 //   display: flex;

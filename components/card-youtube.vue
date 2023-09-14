@@ -61,6 +61,9 @@ export default {
     .video {
         width: 700px;
     }
+    .card-youtube{
+    width: 100%;
+    }
 }
 
 @media (max-width: 7500px) {

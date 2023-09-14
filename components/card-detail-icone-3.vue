@@ -2,17 +2,11 @@
     <div class="overlay-delete">
         <div class="cdp-main">
             <v-card class="cdp-card">
-                <v-card-title id="cdp-card-title">{{ selectedCard.name }}</v-card-title>
-                <img class="cdp-img-detail" :src="card.picture" alt="Photo de profil" />
-                <v-card-text class="cdp-card-text">
-                    <p>{{ selectedCard.decriptif }}</p>
-                    <p>{{ selectedCard.decriptif2 }}</p>
-                    <!-- <a :href="selectedCard.lien" target="_blank">{{ selectedCard.content }}</a> -->
-                    <!-- Vous pouvez ajouter d'autres détails ici -->
-                </v-card-text>
-                <v-card-actions>
-                    <v-btn @click="$emit('close-modale-detail')">Fermer</v-btn>
-                </v-card-actions>
+                <div class="custom-modal-content">
+                    <p class="cid-p1">Les intervenants sont des professionnels du conseil conjugal et familial, membres de
+                        l’Association Nationale des Conseillers Conjugaux et Familiaux (ANCCEF).</p>
+                </div>
+                <v-btn @click="closeModalDetail()">FERMER</v-btn>
             </v-card>
         </div>
     </div>
@@ -20,31 +14,25 @@
 
 <script>
 export default {
-    name: 'presentationmodal',
+    name: 'iconemodal3',
     props: {
         card: Object, // Les informations de la personne
     },
     data() {
         return {
-            showModal: false,
+
         };
     },
     watch: {
-        card(newCard) {
-            // Mettre à jour selectedCard lorsque la prop card change
-            this.selectedCard = newCard;
-            this.showModal = true; // Ouvrir automatiquement la modale lorsque card change
-        },
+
     },
     computed: {
-        selectedCard() {
-            return this.card; // Utiliser une propriété calculée pour accéder aux informations de la carte
-        },
+
     },
     methods: {
-        // closeModalDetail() {
-        //     this.showModal = false;
-        // },
+        closeModalDetail() {
+            this.$emit('close-modale-detail3');
+        },
     },
 };
 </script>
@@ -61,7 +49,7 @@ export default {
     left: 0px;
     right: 0px;
     // margin: 0 auto;
-      position: fixed;
+    position: fixed;
     visibility: visible;
     // opacity: 1;
     // background-color: rgba(0, 0, 0, 0.7);

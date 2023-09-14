@@ -42,13 +42,14 @@ export default {
 
 <style lang="scss">
 #card-main {
-    background-color: $tertiary-color !important;
+    background-color: rgb(213, 209, 209)!important;
     color: $primary-color !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 2%;
+    border-radius: 0px !important;
 }
 
 .cm-title {
@@ -138,21 +139,21 @@ background-color: $primary-color;
     font-style: italic;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    // margin-top: 2%;
+    margin-bottom: 1%;
     white-space: pre-wrap;
     font-size: 1.5em;
     padding: 1%;
     padding-right: 2%;
-    border-radius: 10px;
+    border-radius: 0px !important;
     text-shadow: 10px 8px 20px rgb(0, 0, 0)
 }
 
-@media screen and (min-width: 1900px) {
-    .cmt-text-1 {
-        width: 30%;
-    }
-}
+// @media screen and (min-width: 1900px) {
+//     .cmt-text-1 {
+//         width: 50%;
+//     }
+// }
 
 @media screen and (max-width: 1260px) {
     .cmt-text-1 {
@@ -242,8 +243,8 @@ background-color: $primary-color;
     font-style: italic;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    // margin-top: 2%;
+    // margin-bottom: 2%;
     white-space: pre-wrap;
     font-size: 1.3em;
     text-align: center;
