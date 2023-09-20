@@ -5,7 +5,7 @@
         </v-card-title>
         <div class="cc-text-wrapper">
         <v-card-text class="cc-text1">
-            <div class="cct1-div"><v-icon size="20px" class="ic-phone">mdi-phone</v-icon><span class="cct1-span1">Par
+            <div class="cct1-div"><v-icon size="40px" class="ic-phone">mdi-phone</v-icon><span class="cct1-span1">Par
                     téléphone :</span><span class="cct1-span2">&nbsp06 318 567 24</span><span class="cct1-span3"> *(numero
                     non surtaxé)</span></div>
         </v-card-text>
@@ -52,6 +52,7 @@ export default {
      display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 1.2em;
 
 }
 
@@ -64,7 +65,7 @@ export default {
     width: 100%;
     color: $tertiary-color;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
 }
 
@@ -89,26 +90,28 @@ text-align: center;
 .cc-text2,
 .cc-text3 {
     background-color: $primary-color;
+    font-size: 1.5em;
 }
 
 .cct1-div,
 .ctt2-div,
 .cct3-div {
-    font-size: 1rem;
+    // font-size: 1rem;
+    font-size: 1.2em;
 }
 
 .ctt2-div {
-    font-size: 1rem;
+    font-size: 1.2em;
 }
 
 .cct3-div {
-    font-size: 1rem;
+    font-size: 1.2em;
 }
 
 .cct1-div,
 .ctt2-div,
 .cct3-div {
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 .cct1-span1 {
@@ -117,14 +120,19 @@ text-align: center;
 }
 
 .cct1-span2 {
+display: inline-block;
     color: $white;
     margin-right: 1rem;
-    font-size: large;
+    font-size:1.8rem;
+    overflow-wrap: break-word;
+  
 }
 
 .cct1-span3 {
+display: inline-block;
+  overflow-wrap: break-word;
     color: $white;
-    font-size: 0.8rem;
+    font-size: 0.8em;
 }
 
 .cc-text2 {
@@ -133,7 +141,7 @@ text-align: center;
 
 .cct2-span1 {
     color: $white !important;
-    font-size: 1rem;
+    font-size: 1.4rem !important;
     text-decoration: none;
 }
 
@@ -143,7 +151,7 @@ text-align: center;
 
 .cct3-span1 {
     color: $white !important;
-    font-size: 1rem;
+    font-size: 1.4rem;
     text-decoration: none;
 }
 

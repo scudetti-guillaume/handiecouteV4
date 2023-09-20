@@ -5,10 +5,10 @@
                 <v-card-title id="cdp-card-title">{{ selectedCard.name }}</v-card-title>
                 <img class="cdp-img-detail" :src="card.picture" alt="Photo de profil" />
                 <v-card-text class="cdp-card-text">
-                    <p>{{ selectedCard.decriptif }}</p>
-                    <p>{{ selectedCard.decriptif2 }}</p>
-                    <!-- <a :href="selectedCard.lien" target="_blank">{{ selectedCard.content }}</a> -->
-                    <!-- Vous pouvez ajouter d'autres détails ici -->
+                    <p>{{ selectedCard.modale1}}</p>
+                    <p>{{ selectedCard.modale2}}</p>
+                    <p>{{ selectedCard.modale3}}</p>
+                    <p>{{ selectedCard.modale4}}</p>
                 </v-card-text>
                 <v-card-actions>
                     <v-btn @click="$emit('close-modale-detail')">Fermer</v-btn>

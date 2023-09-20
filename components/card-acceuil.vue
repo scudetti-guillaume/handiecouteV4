@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss">
 #card-main {
-    background-color: rgb(213, 209, 209)!important;
+    background-color:   rgb(0, 0, 0)!important;
     color: $primary-color !important;
     display: flex;
     flex-direction: column;
@@ -58,9 +58,9 @@ export default {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    color: $primary-color;
+    color: $tertiary-color;
     text-align: center;
-    font-style: italic;
+    // font-style: italic;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -74,8 +74,8 @@ export default {
     font-size: 2em;
      font-weight: bold;
          text-align: center;
-    font-style: italic;
-      color: $primary-color;
+    // font-style: italic;
+      color: $tertiary-color;
 }
 
 
@@ -117,7 +117,7 @@ export default {
 .cmt-tel-digit {
    width: 40px;
     height: 40px;
-    background-color: $primary-color; /* Couleur de fond */
+    background-color: $tertiary-color; /* Couleur de fond */
     color: $tertiary-color !important;
     border-radius: 50%; /* Pour créer un cercle */
     display: flex;
@@ -136,7 +136,7 @@ background-color: $primary-color;
     flex-direction: column;
     width: 50%;
     height: 200px;
-    font-style: italic;
+    // font-style: italic;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     // margin-top: 2%;
@@ -213,7 +213,7 @@ background-color: $primary-color;
     height: auto;
       color:$tertiary-color !important;
     // color: $primary-color;
-    font-style: italic;
+    // font-style: italic;
     font-weight: bold;
     font-size: 2em;
     margin-left: 2%;
@@ -227,7 +227,7 @@ background-color: $primary-color;
     height: auto;
     // color: $primary-color;
       color:$tertiary-color !important;
-    font-style: italic;
+    // font-style: italic;
     font-weight: bold;
     font-size: 2em;
 }
@@ -240,7 +240,7 @@ background-color: $primary-color;
     width: 100%;
     height: auto;
     font-size: 60%;
-    font-style: italic;
+    // font-style: italic;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     // margin-top: 2%;
@@ -251,9 +251,9 @@ background-color: $primary-color;
 }
 
 .cmtt2-span {
-    color: $primary-color !important;
+    color: $tertiary-color !important;
     text-align: center;
-    font-style: italic;
+    // font-style: italic;
     font-weight: bolder;
 }
 
@@ -261,13 +261,8 @@ background-color: $primary-color;
     text-shadow: 2ch;
     font-weight: bolder;
     font-style: oblique;
-    font-size: 2rem
-    // background-color: $primary-color; /* Couleur de fond */
-    // color: $tertiary-color !important;
-    // font-size: 1.2em; /* Ajustez la taille de police selon vos préférences */
-    // margin-left: 5px; /* Espace entre l'icône et le numéro */
-    // padding: 5px; /* Ajustez le rembourrage selon vos préférences */
-    // shape-outside: circle(50%); /* Crée un cercle autour du texte */
+    font-size: 2rem;
+    color: $tertiary-color !important;
 }
 .cmt-icone {
     color: $black;
@@ -278,12 +273,12 @@ background-color: $primary-color;
 }
 
 .icon-style-tache{
-   filter: invert(100%);
+   filter: invert(10%);
    margin-right: 1%;
 }
 
 .icon-style-telephone{
-   filter: invert(100%); 
+   filter: invert(10%); 
    margin-left: 2%;
 }
 

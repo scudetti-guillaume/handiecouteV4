@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main-presentation">
         <v-card id="card-presentation">
             <v-card-title class="cp-title">
                 <span class="cpt-span">Qui sommes nous ?</span>
@@ -65,7 +65,11 @@ export default {
                     content: "l’association «Nio Far, tous ensemble»",
                     decriptif: "conseillère conjugale et familiale",
                     decriptif2: "Membre de l'ANCCEF",
-                    lien: 'https://www.assoniofar.org/'
+                    lien: 'https://www.assoniofar.org/',
+                    modale1:"Depuis 2019 conseillère conjugale et familiale, accompagnement en individuel, couple et famille ainsi qu’intervenante en santé sexuelle au sein d’établissement.",
+                    modale2:"Formation d’infirmière initial et divers expériences dans le champ social",
+                    modale3:"Formation spécifique sur  le consentement pour intervenir",
+                    modale4:"Formée sur les questions LGBTQUIA"
                 },
                 {
                     name: "Frédéric Colleuille",
@@ -73,23 +77,16 @@ export default {
                     content: "l’association «Singulier-Pluriel, conseil conjugal et familial»",
                     decriptif: "conseiller conjugal et familial",
                     decriptif2: "Membre de l'ANCCEF",
-                    lien: 'https://www.singulier-pluriel.com'
+                    lien: 'https://www.singulier-pluriel.com',
+                    modale1: "Une longue expérience d’Éducateur Spécialisé",
+                    modale2: "Depuis 2012 Conseiller Conjugal et Familial, accompagnements individuels, couples et dispositifs parents/enfants",
+                    modale3: "Supervision (APP) d'équipes dans le champ sanitaire et social",
                 },
             ],
            
         };
     },
     methods: {
-        // openModal(event, card) {
-        //    const x = event.clientX;
-        //     const y = event.clientY;
-            
-        //     this.selectedCard = card; // Stockez la carte sélectionnée dans selectedCard
-        //     this.$modal.show("presentation-modal",{
-        //         x: x + 'px',
-        //         y: y + 'px',
-        //     });
-        // },
          openModalDetailAction(card) {
             this.selectedCard = card; // Stockez la carte sélectionnée dans selectedCard
             this.openModalDetail = true;
@@ -102,8 +99,14 @@ export default {
 
 <style lang="scss">
 
+.main-presentation{
+background-color: aliceblue;
+
+}
+
 #card-presentation {
-    background-color: $whitebreak !important;
+    background-color: $black !important;
+    color: rgb(254, 254, 254) !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,13 +127,13 @@ export default {
 
 
 .cp-title {
-    background-color: $whitebreak;
+    background-color: $black;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    color: $tertiary-color;
+    color: white !important;
     border-radius: 2%;
 }
 
@@ -139,11 +142,11 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     //   grid-gap: 10px;
     justify-content: space-between;
-    background-color: $whitebreak;
+    background-color:$black ;
 }
 
 .cpt-span{
-    color: $black;
+    color: white;
 
 
 }

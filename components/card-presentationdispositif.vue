@@ -1,6 +1,6 @@
 <template>
-    <v-card id="card-dispo">
-
+<div>
+    <!-- <v-card id="card-dispo">
         <v-card-text class="cd-title">
             <div class="cpd-span"><p class="cpd-span1">Présentation du dispositif</p><p class="cpd-span2">«Handi Écoute»</p> </div>
             <h4 class="cdt-title">POUR QUI ? </h4>
@@ -39,17 +39,17 @@
                 pôle « accompagnants ». Ielles sont membres de l’ANCCEF et sont garant.es du cadre des entretiens, de la
                 confidentialité, du non jugement vis-à vis des personnes qui leur font confiance.
             </p>
-
-            <!-- <h4 class="cdt-title">PLUS D’INFORMATIONS ?</h4>
-            <p class="cd-p7">
-                Vous pouvez nous appeler sur nos permanences téléphoniques et/ou
-                consulter notre page Facebook. Pour nous joindre : ecoutehandi@gmail.com ou 06 318 567 24.
-
-                Marie Eparvier, pour l’association « Nio Far, tous ensemble »
-                Frédéric Colleuille, pour l’association « Singulier-Pluriel, conseil conjugal et familial »
-            </p> -->
         </v-card-text>
+    </v-card> -->
+    <v-card id="card-dispo-flyer"  :style="{ width: imageWidth, height: calculatedHeight }"
+    >
+            <img class="cd-flyer"
+                src="flyer-handiecoute.png" 
+                alt="flyer handiecoute"
+                :style="{ 'max-width': '950px', width: imageWidthfyler, height: calculatedHeightflyer }"
+              />
     </v-card>
+    </div>
 </template>
 
 
@@ -58,8 +58,22 @@ export default {
     name: 'presentationtext',
     data() {
         return {
-
+            imageWidthflyer: '100%',
+            imageWidth: '100%',
         }
+    },
+    computed: {
+        calculatedHeightflyer() {
+            // Calcul de la hauteur comme la moitié de la largeur
+            const widthValue = parseFloat(this.imageWidthflyer);
+            return `${widthValue * 2}%`;
+        },
+         calculatedHeight() {
+            // Calcul de la hauteur comme la moitié de la largeur
+            const widthValue = parseFloat(this.imageWidthflyer);
+            return `${widthValue * 0.2}%`;
+        },
+      
     },
      mounted() {
         this.$emit('component-mounted', this.$el);
@@ -88,6 +102,40 @@ export default {
 
 }
 
+#card-dispo-flyer {
+    background-color:$black !important; ;
+    color: black !important;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // width: 80%;
+    // height: 700px;
+    margin-bottom: 2%;
+    // padding-bottom: 2%;
+    // border: $border;
+    // border-radius: $br;
+}
+
+// @media screen and (min-width: 820px) {
+//     #card-dispo-flyer {
+//         width: 60%;
+//     }
+// }
+    
+
+
+.cd-flyer {
+ display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
 .cd-title {
     background-color: $whitebreak !important;
     width: 100%;

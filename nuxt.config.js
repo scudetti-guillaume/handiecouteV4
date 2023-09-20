@@ -9,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - handi-ecoute',
+    titleTemplate: 'handi-ecoute',
     title: 'handi-ecoute',
     htmlAttrs: {
       lang: 'fr'
@@ -69,5 +69,5 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  target: 'static'
+  // target: 'static'
 }

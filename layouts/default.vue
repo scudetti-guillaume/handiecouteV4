@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import VueSpeech from 'vue-speech';
+// import VueSpeech from 'vue-speech';
 export default {
   name: 'DefaultLayout',
   //  mixins: [VueSpeech], // Utilisez la mixin Vue Speec
@@ -51,21 +51,21 @@ export default {
       this.scrollToRef = refName;
       this.$root.$emit('scroll-to-component', refName);
     },
-     lirePageEntiere() {
-      // Sélectionnez tous les éléments de texte dans le document
-      const elementsTextuels = Array.from(document.querySelectorAll('*')).filter(element => {
-        const isTextElement = element.nodeType === Node.TEXT_NODE && element.textContent.trim() !== '';
-        const isHidden = window.getComputedStyle(element).display === 'none';
-        return isTextElement && !isHidden;
-      });
+    //  lirePageEntiere() {
+    //   // Sélectionnez tous les éléments de texte dans le document
+    //   const elementsTextuels = Array.from(document.querySelectorAll('*')).filter(element => {
+    //     const isTextElement = element.nodeType === Node.TEXT_NODE && element.textContent.trim() !== '';
+    //     const isHidden = window.getComputedStyle(element).display === 'none';
+    //     return isTextElement && !isHidden;
+    //   });
 
-      // Créez un seul texte à partir de tous les éléments de texte
-      const textePage = elementsTextuels.map(element => element.textContent).join(' ');
+    //   // Créez un seul texte à partir de tous les éléments de texte
+    //   const textePage = elementsTextuels.map(element => element.textContent).join(' ');
 
-      // Créez une synthèse vocale
-      // const utterance = new SpeechSynthesisUtterance(textePage);
-      window.speechSynthesis.speak(textePage);
-    }
+    //   // Créez une synthèse vocale
+    //   // const utterance = new SpeechSynthesisUtterance(textePage);
+    //   window.speechSynthesis.speak(textePage);
+    // }
   }, 
   data() {
     return {
@@ -74,8 +74,8 @@ export default {
       drawer: false,
       fixed: false,
       miniVariant: false,
-      right: true,
-      rightDrawer: true,
+      right: false,
+      rightDrawer: false,
       title: 'Handi Ecoute',
       part: [
       {

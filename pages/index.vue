@@ -5,8 +5,8 @@
       <presentation ref="accueil" />
       <presentationicone ref="icone" />
       <youtube ref="presentation" />
-      <ressource ref="ressources" />
       <presentationdispo ref="dispositif" />
+      <ressource ref="ressources" />
       <contact ref="contact" />
   </div>
   
@@ -36,8 +36,7 @@ export default {
     DefaultLayout,
     presentationModal,
     presentationicone,
-    ressource
- 
+    ressource,
   },
   data() {
     return {
@@ -71,22 +70,26 @@ export default {
 display: flex;
 justify-content: center;
 align-items: center;
-  // background: linear-gradient(to right, #FF0018, #FFA52C, #FFFF41, #008018, #0000F9, #86007D)!important;
-  background-color: rgb(255, 255, 255);
+background-color:$background;
 }
 
 .container {
 max-width: 100%;
 margin: 0 auto;
+overflow: hidden;
 padding: 0;
 }
-// #card-main{
-//   background-color: $primary-color;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
+// body {
+
 // }
+#card-main{
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 
 </style>

@@ -1,12 +1,12 @@
 <template>
     <div>
         <v-card id="card-icone">
-            <v-card-title class="ci-title">
+            <v-card-text class="ci-title">
             <p>Des professionnel.les à votre ecoute,</p>
             <p>Conseillers Conjugaux et familliale,</p>
             <p>Membres de l’Association Nationale des Conseillers Conjugaux et Familiaux.</p>
             
-            </v-card-title>
+            </v-card-text>
             <v-card-text class="ci-text">
                <img class="icon-style-hd1" id="icon-style-hd1" src="hd1.png" height="60px" alt="logo handiecoute" @click="openModalDetail1 = true"/>
                <div class="modal-wrapper">
@@ -138,6 +138,7 @@ text-align: center;
 font-size: large;
 font-weight: bolder;
 font-family: Georgia, 'Times New Roman', Times, serif;
+color: black !important;
 }
  
 .ci-text{
