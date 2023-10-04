@@ -64,7 +64,7 @@ export default {
     align-items: center;
     width: 100%;
     color: $tertiary-color;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $police;
     font-size: 1.8rem;
     font-weight: 600;
 }
@@ -76,7 +76,7 @@ align-items: center;
 justify-content: center;
 width: 100%;
 text-align: center;
-
+font-family: $police;
 }
 
 
@@ -91,13 +91,6 @@ text-align: center;
 .cc-text3 {
     background-color: $primary-color;
     font-size: 1.5em;
-}
-
-.cct1-div,
-.ctt2-div,
-.cct3-div {
-    // font-size: 1rem;
-    font-size: 1.2em;
 }
 
 .ctt2-div {

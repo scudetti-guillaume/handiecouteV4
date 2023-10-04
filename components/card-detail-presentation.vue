@@ -22,7 +22,7 @@
 export default {
     name: 'presentationmodal',
     props: {
-        card: Object, // Les informations de la personne
+        card: Object, 
     },
     data() {
         return {
@@ -31,20 +31,17 @@ export default {
     },
     watch: {
         card(newCard) {
-            // Mettre à jour selectedCard lorsque la prop card change
             this.selectedCard = newCard;
-            this.showModal = true; // Ouvrir automatiquement la modale lorsque card change
+            this.showModal = true; 
         },
     },
     computed: {
         selectedCard() {
-            return this.card; // Utiliser une propriété calculée pour accéder aux informations de la carte
+            return this.card; 
         },
     },
     methods: {
-        // closeModalDetail() {
-        //     this.showModal = false;
-        // },
+
     },
 };
 </script>
@@ -63,9 +60,9 @@ export default {
     // margin: 0 auto;
       position: fixed;
     visibility: visible;
-    // opacity: 1;
-    // background-color: rgba(0, 0, 0, 0.7);
-    // transition: opacity 0.4s;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.4s;
     z-index: 1000;
 }
 
@@ -87,6 +84,7 @@ export default {
     width: 40vw !important;
     text-align: center;
     border-radius: 5% !important;
+    border: 3px solid $tertiary-color !important;
 }
 
 @media screen and (max-width: 820px) {
@@ -115,7 +113,7 @@ export default {
 .cdp-card-text {
     color: $white !important;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $police;
     text-align: center;
     font-size: 1.2em;
 

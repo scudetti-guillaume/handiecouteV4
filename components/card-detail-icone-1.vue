@@ -102,7 +102,7 @@ export default {
 .cdp-card-text {
     color: $white !important;
     font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $police;
     text-align: center;
     font-size: 1.2em;
 

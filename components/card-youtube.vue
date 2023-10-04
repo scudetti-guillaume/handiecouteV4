@@ -60,8 +60,8 @@ export default {
 }
 
 .cy-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+     font-family: $police;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }

@@ -8,28 +8,28 @@
                     sont disponible <span class="crt-link-ici">ici</span> </a>
             </v-card-title>
             <v-card class="cr-w-1">
-                <p>#Violences sexuelles faites aux enfants, on dit STOP </p>
+                <p class="yt-title-card">#Violences sexuelles faites aux enfants, on dit STOP </p>
                 <iframe class="video" width="500" height="300" :src="embedUrlEnfant" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </v-card>
             <v-card class="cr-w-2">
-                <p>#Violences conjugales, comment faire ?</p>
+                <p class="yt-title-card">#Violences conjugales, comment faire ?</p>
                 <iframe class="video" width="500" height="300" :src="embedUrlViolence" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </v-card>
             <v-card class="cr-w-3">
-                <p>#Consentement sous différents angles</p>
+                <p class="yt-title-card">#Consentement sous différents angles</p>
                 <iframe class="video" width="500" height="300" :src="embedUrlConsentement" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </v-card>
             <v-card class="cr-w-4">
-                <p>#Harcèlement, on en parle ? </p>
+                <p class="yt-title-card">#Harcèlement, on en parle ? </p>
                 <iframe class="video" width="500" height="300" :src="embedUrlHarcelement" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -39,7 +39,7 @@
                 </a>
             </v-card>
             <v-card class="cr-w-6">
-                <p>#IST c’est quoi concrètement ?</p>
+                <p class="yt-title-card">#IST c’est quoi concrètement ?</p>
                 <a href="../static/Les-IST-brochure.pdf" download="guide-IST.pdf"></a>
                 <p><a class="cr-w-5-w-link" href="../static/Les-IST-brochure.pdf"
                         download="guide-transidentité.pdf">Telecharger le guide sur les IST</a> </p>
@@ -48,7 +48,7 @@
 
             </v-card>
             <v-card class="cr-w-5">
-                <p>#Transidentité c’est quoi ?</p>
+                <p class="yt-title-card">#Transidentité c’est quoi ?</p>
                 <div class="cr-w-5-w">
                     <p>Le guide sur la transidentité </p>
                     <p><a class="cr-w-5-w-link" href="../static/Chrysalide-GuideRdR-Volume1.pdf"
@@ -79,24 +79,15 @@ export default {
         embedUrlEnfant() {
             return `https://www.youtube.com/embed/${this.videoenfant}`
         },
-
         embedUrlViolence() {
             return `https://www.youtube.com/embed/${this.videoviolence}`
         },
-
         embedUrlConsentement() {
             return `https://www.youtube.com/embed/${this.videoconsentement}`
         },
         embedUrlHarcelement() {
             return `https://www.youtube.com/embed/${this.videoharcelement}`
         },
-        embedUrlViolence() {
-            return `https://www.youtube.com/embed/${this.videoviolence}`
-        },
-        embedUrlViolence() {
-            return `https://www.youtube.com/embed/${this.videoviolence}`
-        }
-
     },
     mounted() {
 
@@ -118,6 +109,8 @@ export default {
     width: 100%;
     background-color:$white !important;
     margin-bottom: 2%;
+     font-family: $police;
+     font-size:1rem;
     }
 
 
@@ -168,12 +161,12 @@ export default {
     }
 }
 
-@media (max-width: 460px) {
-    .video {
-        width: 300px;
-        height: 250;
-    }
-}
+// @media (max-width: 460px) {
+//     .video {
+//         width: 300px;
+//         height: 250;
+//     }
+// }
 
 
 .cr-title {
@@ -185,7 +178,8 @@ export default {
 
 .crt-span {
     text-align: center;
-    font-size: larger;
+    // font-size: larger;
+    font-size:1.6rem
 }
 
 .crt-link {
@@ -198,7 +192,11 @@ export default {
     color: $tertiary-color !important;
 }
 
+.yt-title-card{
+font-size:1.2rem;
+text-align:center;
 
+}
 
 
 .cr-w-1 {

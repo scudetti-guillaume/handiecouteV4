@@ -131,9 +131,7 @@ v-container {
 
 .title-style {
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: $tertiary-color;
   display: flex;
   flex-direction: row;
   min-width: 200px;
@@ -141,7 +139,8 @@ v-container {
   justify-content: space-around;
   text-decoration: none;
   color: $tertiary-color !important;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $police;
+  font-size: 1.6rem;
 }
 
 .itemlist{
